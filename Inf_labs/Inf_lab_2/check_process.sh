@@ -1,12 +1,12 @@
 #!/bin/bash
 
 if [ $# -ne 1 ]; then
-echo "Enter name of process:"
+echo "No processes sented or more than 1 process"
 exit 1
 fi
 
-if pgrep -x  "$name" > /dev/null; then
-echo "Process '$name started'"
+if ps aux | grep  "$1" > /dev/null; then
+echo "Process '$1' started"
 else
-echo "Process don't found"
+echo "Process '$1' don't found"
 fi
