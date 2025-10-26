@@ -26,3 +26,5 @@ for file in "$dir"/*.txt; do
 		exit 1
 	fi
 done
+
+echo "The end"
