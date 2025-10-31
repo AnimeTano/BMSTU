@@ -36,6 +36,7 @@ void parseCommand(const char* input, std::vector<Command>& buffer){
 
 int main(){
     std::vector<Command> buffer;
+    
     parseCommand("FORWARD 10", buffer);
     parseCommand("TURN 90", buffer);
     parseCommand("STOP", buffer);
