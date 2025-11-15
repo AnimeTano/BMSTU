@@ -195,7 +195,7 @@ void SortByPar(){
         if (Pos != std::string::npos && commaPos != std::string::npos){
             Book book;
             book.title = line.substr(0, Pos);
-            book.author = line.substr(Pos + 1, commaPos - Pos - 1);
+            book.author = line.substr(Pos + 1, commaPos - 1);
             book.year = std::stoi(line.substr(commaPos + 1));
 
             books.push_back(book);
