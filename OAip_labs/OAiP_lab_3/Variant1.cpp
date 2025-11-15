@@ -27,7 +27,7 @@ void AddtoFile(const std::string& stroka){
 short Opr(){
     short n = 0;
 
-    std::cout << "Variants to choose\n";
+    std::cout << std::setw(15) << "Variants to choose\n";
 
     std::cout << "1. Add books\n";
     std::cout << "2. Search by title\n";
@@ -57,7 +57,7 @@ void ShowAllBooks(){
 
     std::string line;
     short count = 0;
-    std::string output = "\n ===All books=== \n";
+    std::string output = "\n\t All books \t\n";
 
     while (std::getline(inFile, line)){
         count++;
@@ -305,7 +305,7 @@ void SearchByYear(){
 
     std::string line;
     bool found = false;
-    std::string output = "\n ===Books released before " + std::to_string(year) + "=== \n";
+    std::string output = "\n\tBooks released before " + std::to_string(year) + "\t\n";
 
     while (std::getline(inFile, line)){
         size_t pos = line.find_last_of(',');
